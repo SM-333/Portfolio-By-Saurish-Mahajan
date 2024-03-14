@@ -1,0 +1,9 @@
+/*HAMBURGER MENU ACCORDING TO SCREEN SIZE */
+@media screen and (max-width:75rem ){
+    #desktop-nav {
+        display: none;          
+    }
+    #hamburger-nav{
+        display:flex ;
+    }
+}

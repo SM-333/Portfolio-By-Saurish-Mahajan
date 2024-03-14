@@ -1,0 +1,358 @@
+/*General */
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ 
+}
+/*adding background chrishs speacial*/
+.background{
+        
+        display: grid;
+        grid-template-columns: repeat(16 , 1fr);
+        width: 100%;
+        justify-items: center;
+        position: fixed;
+        top: 0%;
+        z-index:-1;
+        left: 0%;
+
+}
+.background p{
+        font-size: 2rem ;
+        font-family: Arial, Helvetica, sans-serif;
+        opacity: 15%;
+}
+
+.background p:nth-child(odd){
+        animation: moveUp 10s infinite linear;
+}
+.background p:nth-child(even){
+        animation: moveDown 10s infinite linear;
+}
+@keyframes moveUp{
+        0%{
+                transform: translate(0,-50vh);
+        }
+        100%{
+                transform: translate(0,10vh) ;
+        }
+}
+@keyframes moveDown{
+        0%{
+                transform: translate(0,10vh);
+        }
+        100%{
+                transform: translate(0,-50vh);
+        }
+}
+body{
+        font-family: "Anta", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    
+}
+.background{
+        background-color: black;
+}
+/*THE BACKGROUND ENDS DONE WITH IT NOW */
+html {
+   scroll-behavior: smooth;  
+
+}
+
+p{
+  color: rgb(188, 188, 188);
+
+}
+h1 , h2 , h3{
+        color: whitesmoke;
+}
+/*TRANSITION */
+a, .btn{
+        transition: all 300ms ease;
+}
+
+/*DEKSTOP NAV */
+nav, .nav-links{
+        display:flex ;
+}
+nav {
+        justify-content: space-around;
+        align-items: center ;
+        height: 17vh;
+}
+
+.nav-links{
+        gap: 2rem;
+        list-style: none;
+        font-size: 1.5rem;
+}
+/*styling the link elements*/
+a{
+        color: white;
+        text-decoration: none;
+        text-decoration-color: grey;       
+}
+/*styling the link elements on hover */
+a:hover{
+        color:darkviolet;
+        text-decoration: underline;
+        text-underline-offset: 1rem;
+        text-decoration-color: rgb(red, green, blue);
+}
+/*LOGO STYLING */
+.logo{
+        font-size: 2rem;
+        color: white;
+}
+/*LOGO STYLING ON HOVER  */
+.logo:hover{
+        cursor: default;
+}
+
+/*HAMBURGER MENU*/
+#hamburger-nav{
+        display:none;
+}
+
+.hamburger-menu{
+        position:relative;
+        display:inline-block;
+}
+
+.hamburger-icon{
+        display:flex;
+        flex-direction:column ;
+        justify-content: space-between;
+        height: 1.5rem;
+        width: 1.875rem ;
+        cursor: pointer;    
+}
+
+.hamburger-icon span{
+        width:100% ;
+        height: 0.125rem;
+        background-color: white;
+        transition: all 0.3 ease-in-out;
+}
+
+.menu-links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgb(108, 108, 108);
+        width: fit-content;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3 ease-in-out;
+}
+ /*targetting the menu and each link in it */
+.menu-links a{
+        display: block;
+        padding: 0.625rem;
+        text-align: center;
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        transition: all 0.3 ease-in-out;
+}
+
+.menu-links li{
+        list-style: none;
+}
+.menu-links.open {
+      max-height:18.75rem;  
+}
+/*ROTATING THE NAVBAR INTO A CROSS */
+.hamburger-icon.open span:first-child{
+        transform:rotate(45deg) translate(0.625rem,0.3125rem)        
+}
+.hamburger-icon.open span:nth-child(2){
+        opacity: 0;        
+}
+.hamburger-icon.open span:last-child{
+        transform:rotate(-45deg) translate(0.625rem,-0.3125rem)        
+}
+.hamburger-icon  span:first-child{
+        opacity:1;
+}
+.hamburger-icon span:first-child{
+        transform:none ;
+}
+/*Sections */
+section {
+        padding-top:4vh ;
+        height: 96vh;
+        margin: 0 10rem ;
+        box-sizing: border-box;
+        min-height: fit-content;
+} 
+
+.section-container{
+        display: flex;
+}
+
+/*PROFILE SECTION*/
+
+#profile{
+        display: flex;
+        justify-content:center ;
+        gap: 5rem;
+        height: 70vh;
+       
+}
+/*styling image and adding hover affect */
+.section__pic-container{
+        overflow: hidden;
+        border-radius: 50%;
+        object-fit: cover;
+        display: flex;
+        height: 15rem ;
+        width: 14rem;
+        margin: auto 0;
+        filter: grayscale(80%);
+        transition: filter 0.5s ;
+        border: 0.25rem solid white;     
+        transition: transform 0.5s; 
+       
+}
+.section__pic-container:hover{
+        filter: grayscale(0%);
+        border: 0.25rem solid rgb(90, 0, 128);
+        transform: scale(1.2);
+
+}
+
+/*aligning text to center*/
+.section__text{
+        align-self:center;
+        text-align: center;
+}                                                       
+
+.section__text_p{
+        font-weight: 700;
+}
+.section__text_p1{
+        font-size: 1.2rem; 
+        text-align: center;
+}
+.section__text_p2{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+}
+.title{
+        font-size: 2rem;
+        text-align:center;
+        color: white;
+}
+
+#socials-container{
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 1rem;
+       
+}
+/*icons github and linkedin */
+.icon {
+        cursor:pointer;
+        height:2rem;
+        filter: invert(100%);
+
+}
+
+/*Buttons for contact and cv */
+.btn-container{
+        display: flex;
+        justify-content: center;
+        gap: 2rem ;
+        padding: 0.5rem;
+}
+.btn{
+
+        font-weight:600 ;
+        transition: all 300ms ease;
+        padding: 1rem;
+        width: 9rem;
+        border-radius: 2rem ;
+        
+}
+.btn-color-1, .btn-color-2{
+        border: rgb(255, 255, 255) 0.1rem solid;
+}
+/*adding cursor on hover*/
+.btn-color-1:hover , .btn-color-2:hover{
+        cursor: pointer;
+}
+/*color and border change on hover */
+.btn-color-1 , .btn-color-2:hover{
+        background-color: rgb(0, 0, 0);
+        color: white;
+}
+
+.btn-color-1:hover {
+        background: white;
+        color: black;
+        border: darkviolet 0.125rem solid;
+}
+
+.btn-color-2{
+        background-color: none;
+        color: black;
+}
+
+.btn-color-2:hover{
+        border: darkviolet 0.125rem solid;
+}
+.btn-container{
+        gap: 1rem;
+}
+/*about section styling */
+#about{
+        position: relative ;
+}
+.about-container{
+        gap: 2rem;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+}
+.about-details-container{
+        justify-content:center ;
+        flex-direction: column;
+        gap: 1rem;
+
+}
+.about-container, .about-details-container{
+        display: flex;
+        gap: 3rem ;
+        
+}
+.about-pic{
+        
+        height: 20rem;
+}
+.arrow{
+        position: absolute;
+        right: -5rem;
+        bottom: 2.5rem;
+}
+
+.details-container{
+        padding:1.5rem ;
+        flex:1;
+        background: none;
+        border-radius: 2rem;
+        border: white 0.125rem solid;
+        border-color: rgb(163, 163, 163);
+        text-align: center;
+}
+.section-container{
+        gap:4rem;
+        height: 80%;
+}
+
+.text-container{
+        color: white ;
+}
