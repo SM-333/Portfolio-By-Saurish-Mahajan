@@ -356,3 +356,81 @@ section {
 .text-container{
         color: white ;
 }
+/*experience styling*/
+.experience-sub-title{
+        color: rgb(162, 162, 162);
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-bottom:2rem ;
+}
+
+.experience-details-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+}
+
+.article-container{
+        display: flex;
+        text-align: initial;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2.5rem;
+        justify-content: space-around;
+}
+
+.article{
+        display: flex;
+        width: 10rem;
+        justify-content: space-around;
+        gap: 0.5rem;
+}
+.article.icon{
+        cursor: default;
+}
+
+/*PROJECT SECTION/PAGE */
+.color-container{
+        border-color: rgb(162, 162, 162);
+        
+}
+.project-img{
+        border-radius: 2rem;
+        width: 90%;
+        height: 90%;
+}
+.project-title{
+        margin: 1rem;
+        color: white ;
+}
+
+/*CONTACT PAGE*/
+#contact{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 70vh;
+}
+.contact-info{
+        display: flex;
+        justify-content: center;
+        border-radius: 2rem;
+        border: rgb(255, 255, 255) 0.1rem solid ;
+        border-color:rgb(255, 255, 255) ;
+        background: none;
+        margin: 2rem;
+        padding: 0.5rem;
+}
+.contact-info-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 1rem;
+}
+.contact-info-container p{
+        font-size: larger;
+}
+.email-icon{
+        height: 2.5rem;
+}
