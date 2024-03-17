@@ -183,11 +183,12 @@ a:hover{
 }
 /*Sections */
 section {
-        padding-top:4vh ;
+        padding-top:2rem ;
         height: 96vh;
         margin: 0 10rem ;
         box-sizing: border-box;
         min-height: fit-content;
+        padding-bottom: 2rem;
 } 
 
 .section-container{
@@ -312,9 +313,10 @@ section {
 /*about section styling */
 #about{
         position: relative ;
+        padding-bottom: -2rem;
 }
 .about-container{
-        gap: 2rem;
+        gap: 1rem;
         margin-bottom: 1rem;
         margin-top: 2rem;
 }
@@ -326,18 +328,14 @@ section {
 }
 .about-container, .about-details-container{
         display: flex;
-        gap: 3rem ;
+        gap: 1rem ;
         
 }
 .about-pic{
         
         height: 20rem;
 }
-.arrow{
-        position: absolute;
-        right: -5rem;
-        bottom: 2.5rem;
-}
+
 
 .details-container{
         padding:1.5rem ;
@@ -349,7 +347,7 @@ section {
         text-align: center;
 }
 .section-container{
-        gap:4rem;
+        gap:2rem;
         height: 80%;
 }
 
@@ -406,10 +404,17 @@ section {
 
 /*CONTACT PAGE*/
 #contact{
+        padding-top: 20rem;
         display: flex;
         justify-content: center;
         flex-direction: column;
         height: 70vh;
+}
+.contact-footer{
+        padding-top: 13rem;
+        padding-bottom: 2rem;
+
+
 }
 .contact-info{
         display: flex;
@@ -435,8 +440,10 @@ section {
         height: 2.5rem;
 }
 
+
 /*footer*/
 footer{
+       
         height: 26vh;
         margin: 0.1rem;
 }
